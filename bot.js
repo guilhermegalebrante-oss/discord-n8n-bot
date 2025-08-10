@@ -13,6 +13,11 @@ import {
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
+import express from 'express';
+const app = express();
+app.get('/', (_, res) => res.send('ok'));
+app.listen(process.env.PORT || 3000);
+
 
 // ================== CONFIG BÁSICA ==================
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
